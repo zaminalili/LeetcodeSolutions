@@ -2,8 +2,8 @@
 
 Console.WriteLine("** Solution Testing **");
 
-int x = -121;
+int x = 0;
 int max = Convert.ToInt32(Math.Pow(2, 31) - 1);
 
 
-Console.WriteLine(PalindromeNumber.IsPalindrome(max));
+Console.WriteLine(PalindromeNumber.IsPalindrome(x));

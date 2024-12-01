@@ -4,19 +4,24 @@ public static class PalindromeNumber
 {
     public static bool IsPalindrome(int x)
     {
-        string xString = x.ToString();
-
-        int i = 0;
-        int j = xString.Length - 1;
-
-        while (i < j)
-        {
-            if (xString[i] != xString[j])
-                return false;
-            i++;
-            j--;
-        }
+        int reversedNumber = ReverseNumber(x);
+        if (reversedNumber != x)
+            return false;
 
         return true;
+    }
+
+    private static int ReverseNumber(int num)
+    {
+        int reversedNumber = 0;
+
+        while (num > 0)
+        {
+            int remainder = num % 10;
+            reversedNumber = (reversedNumber * 10) + remainder;
+            num = num / 10;
+        }
+
+        return reversedNumber;
     }
 }
