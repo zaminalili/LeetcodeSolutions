@@ -39,4 +39,24 @@ public class RomanToInteger
        
         return result;
     }
+
+    public int RomanToIntV2(string s)
+    {
+        int result = 0;
+        int previous = 0;
+
+        for (int i = s.Length-1; i >= 0; i--)
+        {
+            int current = symbolValue[s[i]];
+
+            if (previous > current)
+                result -= current;
+            else
+                result += current;
+
+            previous = current;
+        }
+
+        return result;
+    }
 }

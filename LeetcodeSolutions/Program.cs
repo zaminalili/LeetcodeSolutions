@@ -20,4 +20,4 @@ string max = "MMMCMXCIX";
 string case4 = "CMCMCMCMC";
 
 
-Console.WriteLine(RomanToInteger.RomanToInt(case4));
+Console.WriteLine(RomanToInteger.RomanToIntV2(case4));
