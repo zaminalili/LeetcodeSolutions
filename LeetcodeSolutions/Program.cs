@@ -2,8 +2,22 @@
 
 Console.WriteLine("** Solution Testing **");
 
-int x = 0;
-int max = Convert.ToInt32(Math.Pow(2, 31) - 1);
+//{ "I", 1 },
+//{ "V", 5 },
+//{ "X", 10 },
+//{ "L", 50 },
+//{ "C", 100 },
+//{ "D", 500 },
+//{ "M", 1000 },
+
+var RomanToInteger = new RomanToInteger();
 
 
-Console.WriteLine(PalindromeNumber.IsPalindrome(x));
+string case1 = "II";
+string case2 = "LVIII";
+string case3 = "MCMXCIV";
+string max = "MMMCMXCIX";
+string case4 = "CMCMCMCMC";
+
+
+Console.WriteLine(RomanToInteger.RomanToInt(case4));
